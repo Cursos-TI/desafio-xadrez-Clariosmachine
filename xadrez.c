@@ -11,6 +11,9 @@ int main() {
     const int CASAS_BISPO_DIREITA = 5;
     const int CASAS_BISPO_CIMA = 5;
     const int CASAS_RAINHA = 8;
+    //Desafio nível aventureiro
+    const int CASAS_CAVALO_ESQUERDA = 1;
+    const int CASAS_CAVALO_BAIXO = 2;
 
     // MOVIMENTO TORRE
     for (int passo = 1; passo <= CASAS_TORRE; passo++) {
@@ -56,6 +59,33 @@ int main() {
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+    //const int CASAS_CAVALO_ESQUERDA = 1;
+    //const int CASAS_CAVALO_BAIXO = 2;
+    for (int movimento_baixo = 0; movimento_baixo <= CASAS_CAVALO_BAIXO; movimento_baixo++)
+    {
+        
+        while (movimento_baixo < CASAS_CAVALO_BAIXO) 
+        {
+            movimento_baixo++;
+            printf("O cavalo se movimentou um passo para baixo.\n");
+            printf("%d passo dado.\n", movimento_baixo);
+            //printf("Dentro do While \n");
+
+        }
+
+        //printf("Fora do While.\n");
+
+        if (movimento_baixo == 2)
+        {
+            printf("O cavalo se movimentou %d passo para a esquerda.\n", CASAS_CAVALO_ESQUERDA);
+        } else {
+            printf("Não movimenta esquerda. \n");
+        }
+
+        printf("Fim do loop do cavalo. \n");
+    }
+    
+
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
